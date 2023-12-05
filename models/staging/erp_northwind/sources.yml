@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: erp
+    description: fonte sap vendas northwind
+    schema: erp_northwind
+    tables:
+    - name: categories
+      columns: 
+        - name: category_id
+          tests:
+            - unique
+            - not_null
+
+
+    - name: suppliers
+
+
+    - name: products
