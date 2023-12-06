@@ -1,0 +1,47 @@
+version: 2 
+
+models:
+  - name: dim_produtos
+    description: dim produtos da northwind. uma linha p\ prod., com infos de cat e forn.
+    columns:
+      - name: id_produto
+        description: chave prim dim prod
+        tests:
+          - not_null
+          - unique
+
+      - name: id_fornecedor
+        description: <falta completar>
+
+      - name: id_categoria
+        description: <falta completar>
+
+      - name: nome_produto
+        description: <falta completar>
+
+      - name: quantidade_por_unidade
+        description: <falta completar>
+
+      - name: preco_por_unidade
+        description: <falta completar>
+
+      - name: unidades_em_estoque
+        description: <falta completar>
+
+      - name: unidades_por_ordem
+        description: <falta completar>
+
+      - name: nivel_reabastecimento
+        description: <falta completar>
+
+      - name: eh_descontinuado
+        description: <falta completar>
+
+      - name: nome_categoria
+        description: <falta completar>
+
+      - name: nome_fornecedor
+        description: <falta completar>
+
+      - name: pais_fornecedor
+        description: <falta completar>
