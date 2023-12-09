@@ -1,0 +1,17 @@
+version: 2 
+
+models:
+  - name: fct_vendas
+    description: tb com fatos vendas cada linha descreve infos de um produto vendido.
+    columns:
+      - name: sk_pedido_item
+        description: chave surrogate fct vendas
+        tests:
+          - not_null
+          - unique
+
+      - name: frete_ponderado
+        description: metrica criada dividindo frete pelo numero de produtos diferentes na NF.
+
+      - name: total_bruto
+        description: vlr qtd multiplicado pelo preco unit sem descontos.
