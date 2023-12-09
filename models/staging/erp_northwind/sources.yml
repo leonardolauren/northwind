@@ -17,3 +17,18 @@ sources:
 
 
     - name: products
+
+  
+    - name: employees
+
+
+    - name: orders
+      description: uma linha por pedido (nf). inclui pedidos canc e del
+      columns:
+        - name: order_id
+          tests:
+            - unique
+            - not_null
+              
+
+    - name: order_details

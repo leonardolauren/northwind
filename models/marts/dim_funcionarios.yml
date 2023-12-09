@@ -1,0 +1,11 @@
+version: 2 
+
+models:
+  - name: dim_funcionarios
+    description: dim func da northwind. Rel Func p gerentes e dados dos colaboradores.
+    columns:
+      - name: id_funcionario
+        description: chave prim dim func
+        tests:
+          - not_null
+          - unique
