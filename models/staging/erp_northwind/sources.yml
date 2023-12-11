@@ -32,3 +32,6 @@ sources:
               
 
     - name: order_details
+
+
+    - name: customers

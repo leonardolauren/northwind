@@ -14,6 +14,11 @@ with
         from {{ ref('int_vendas__pedido_itens') }}
     )
 
+    , clientes as (
+        select *
+        from {{ ref('dim_clientes') }}
+    )
+
     , joined_tabelas as (
         select
             int_vendas.sk_pedido_item
@@ -45,11 +50,14 @@ with
             , funcionarios.cargo_funcionario
             , funcionarios.dt_nascimento_func
             , funcionarios.dt_contratacao
+            , clientes.cliente_nome
         from int_vendas
         left join produtos on
             int_vendas.id_produto = produtos.id_produto
         left join funcionarios on
             int_vendas.id_funcionario = funcionarios.id_funcionario
+        left join clientes on
+            int_vendas.id_cliente = clientes.id_cliente
     )
 
     , tranformacoes as (
@@ -97,6 +105,7 @@ with
             , cargo_funcionario
             , dt_nascimento_func
             , dt_contratacao
+            , cliente_nome
       from tranformacoes
     )
 
