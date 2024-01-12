@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: Customer
+    description: teste  
+    schema: boaboa    
+    tables:
+    - name: Customer
+      columns: 
+        - name: Customer_ID
+          tests:
+            - unique
+            - not_null
